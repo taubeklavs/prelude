@@ -1,1 +1,1 @@
-(setq prelude-theme 'solarized)
+(setq prelude-theme 'dracula)
