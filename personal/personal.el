@@ -3,6 +3,10 @@
 (scroll-bar-mode -1)
 (menu-bar-mode -1)
 
+(prelude-require-package 'ag)
+(prelude-require-package 'dracula-theme)
+(prelude-require-package 'material-theme)
+
 (setq avy-all-windows 't)
 (setq aw-keys '(97 115 100 102 103 104 106 107 108)) ;; ace-window "asdfghjkl"
 
