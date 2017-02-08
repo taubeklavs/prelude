@@ -4,13 +4,10 @@
 (menu-bar-mode -1)
 
 (prelude-require-package 'ag)
-(prelude-require-package 'dracula-theme)
-(prelude-require-package 'material-theme)
+(prelude-require-package 'moe-theme)
 
 (setq avy-all-windows 't)
 (setq aw-keys '(97 115 100 102 103 104 106 107 108)) ;; ace-window "asdfghjkl"
-
-(set-face-attribute 'default nil :family "SF Mono" :height 130 :weight 'regular)
 
 (defun my-term-mode-hook ()
   (let ((oldmap (cdr (assoc 'prelude-mode minor-mode-map-alist)))
@@ -22,7 +19,9 @@
 
 (add-hook 'term-mode-hook 'my-term-mode-hook)
 
-(defvar cycle-themes-list (vector 'dracula 'material-light))
+(require 'moe-theme)
+
+(defvar cycle-themes-list (vector 'moe-dark 'moe-light))
 (defvar cycle-themes--index 0)
 
 (defadvice load-theme (before theme-dont-propagate activate)
@@ -46,6 +45,8 @@
 (setq cider-cljs-lein-repl "(do (use 'figwheel-sidecar.repl-api)
                                 (start-figwheel!)
                                 (cljs-repl))")
+
+(set-face-attribute 'default nil :family "SF Mono" :height 160 :weight 'regular)
 
 (provide 'personal)
 ;;; personal.el ends here
