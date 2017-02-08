@@ -1,1 +1,2 @@
-(setq prelude-theme 'dracula)
+(require 'moe-theme)
+(setq prelude-theme 'moe-dark)
