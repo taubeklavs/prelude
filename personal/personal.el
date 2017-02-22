@@ -46,7 +46,7 @@
                                 (start-figwheel!)
                                 (cljs-repl))")
 
-(set-face-attribute 'default nil :family "SF Mono" :height 160 :weight 'regular)
+(set-face-attribute 'default nil :family "Hack" :height 150)
 
 (provide 'personal)
 ;;; personal.el ends here
