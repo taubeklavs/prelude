@@ -4,7 +4,6 @@
 (menu-bar-mode -1)
 
 (prelude-require-package 'ag)
-(prelude-require-package 'moe-theme)
 
 (setq avy-all-windows 't)
 (setq aw-keys '(97 115 100 102 103 104 106 107 108)) ;; ace-window "asdfghjkl"
@@ -19,22 +18,29 @@
 
 (add-hook 'term-mode-hook 'my-term-mode-hook)
 
-(require 'moe-theme)
+(prelude-require-package 'color-theme-solarized)
 
-(defvar cycle-themes-list (vector 'moe-dark 'moe-light))
-(defvar cycle-themes--index 0)
+(load-theme 'solarized t)
 
 (defadvice load-theme (before theme-dont-propagate activate)
   (mapc #'disable-theme custom-enabled-themes))
 
-(defun get-current-theme ()
-  (elt cycle-themes-list cycle-themes--index))
+(add-hook 'after-make-frame-functions
+          (lambda (frame)
+            (let ((mode (if (display-graphic-p frame) 'light 'dark)))
+              (set-frame-parameter frame 'background-mode mode)
+              (set-terminal-parameter frame 'background-mode mode))
+            (enable-theme 'solarized)))
+
+(defun next-solarized-mode ()
+  (if (eq frame-background-mode 'light)
+      'dark
+    'light))
 
 (defun switch-themes ()
   (interactive)
-  (load-theme (elt cycle-themes-list cycle-themes--index))
-  (setq cycle-themes--index (mod (1+ cycle-themes--index)
-                                 (length cycle-themes-list))))
+  (customize-set-variable 'frame-background-mode (next-solarized-mode))
+  (load-theme 'solarized t))
 
 (key-chord-unset-global "jl")
 (key-chord-define-global "xx" 'smex)

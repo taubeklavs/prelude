@@ -1,2 +1,1 @@
-(require 'moe-theme)
-(setq prelude-theme 'moe-dark)
+(setq prelude-theme 'solarized)
