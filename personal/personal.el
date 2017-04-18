@@ -52,6 +52,9 @@
                                 (start-figwheel!)
                                 (cljs-repl))")
 
+;;; GitHub
+
+(prelude-require-package 'github-browse-file)
 
 (setq face-height 120)
 
