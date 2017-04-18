@@ -67,5 +67,8 @@
 (global-set-key (kbd "M-s-+") (lambda () (interactive) (change-face-height '+)))
 (global-set-key (kbd "M-s-–") (lambda () (interactive) (change-face-height '-)))
 
+;; No text in frame title
+(setq frame-title-format "")
+
 (provide 'personal)
 ;;; personal.el ends here
