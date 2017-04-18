@@ -52,7 +52,20 @@
                                 (start-figwheel!)
                                 (cljs-repl))")
 
-(set-face-attribute 'default nil :family "Hack" :height 150)
+
+(setq face-height 120)
+
+(set-face-attribute 'default nil :family "Hack" :height face-height)
+
+(defun set-face-height (height)
+  (set-face-attribute 'default nil :height height))
+
+(defun change-face-height (action)
+  (setq face-height (funcall action face-height 20))
+  (set-face-height face-height))
+
+(global-set-key (kbd "M-s-+") (lambda () (interactive) (change-face-height '+)))
+(global-set-key (kbd "M-s-–") (lambda () (interactive) (change-face-height '-)))
 
 (provide 'personal)
 ;;; personal.el ends here
