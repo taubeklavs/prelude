@@ -58,6 +58,14 @@
 
 ;;; Fish
 (prelude-require-package 'fish-mode)
+
+;;; Prelude FC-Github
+(prelude-install-search-engine "fullcontact"
+                               "https://github.com/search?q=org:fullcontact%20"
+                               "Search FullContact GitHub: ")
+
+(global-set-key (kbd "C-c F") 'prelude-fullcontact)
+
 (setq face-height 120)
 
 (set-face-attribute 'default nil :family "Hack" :height face-height)
