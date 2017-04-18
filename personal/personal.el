@@ -56,6 +56,8 @@
 
 (prelude-require-package 'github-browse-file)
 
+;;; Fish
+(prelude-require-package 'fish-mode)
 (setq face-height 120)
 
 (set-face-attribute 'default nil :family "Hack" :height face-height)
