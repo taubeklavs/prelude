@@ -18,9 +18,11 @@
 
 (add-hook 'term-mode-hook 'my-term-mode-hook)
 
-(prelude-require-package 'color-theme-solarized)
+;; outline-minor-mode hack for solarized
+(outline-minor-mode t)
+(outline-minor-mode nil)
 
-(load-theme 'solarized t)
+(prelude-require-package 'color-theme-solarized)
 
 (defadvice load-theme (before theme-dont-propagate activate)
   (mapc #'disable-theme custom-enabled-themes))
