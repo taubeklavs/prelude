@@ -81,5 +81,7 @@
 ;; No text in frame title
 (setq frame-title-format "")
 
+(setq clojure-indent-style :align-arguments)
+
 (provide 'personal)
 ;;; personal.el ends here
