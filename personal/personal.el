@@ -85,5 +85,7 @@
 
 (setq avy-all-windows 'all-frames)
 
+(global-set-key (kbd "C-c T") 'ansi-term)
+
 (provide 'personal)
 ;;; personal.el ends here
