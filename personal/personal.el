@@ -50,10 +50,6 @@
 
 (define-key key-translation-map (kbd "M-ESC") (kbd "`"))
 
-(setq cider-cljs-lein-repl "(do (use 'figwheel-sidecar.repl-api)
-                                (start-figwheel!)
-                                (cljs-repl))")
-
 ;;; GitHub
 
 (prelude-require-package 'github-browse-file)
