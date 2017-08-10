@@ -83,5 +83,7 @@
 
 (setq clojure-indent-style :align-arguments)
 
+(setq avy-all-windows 'all-frames)
+
 (provide 'personal)
 ;;; personal.el ends here
