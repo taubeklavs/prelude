@@ -87,5 +87,7 @@
 
 (global-set-key (kbd "C-c T") 'ansi-term)
 
+(setq ido-default-buffer-method 'selected-window)
+
 (provide 'personal)
 ;;; personal.el ends here
