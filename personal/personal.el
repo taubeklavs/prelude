@@ -92,5 +92,16 @@
 ;; Start in full-screen
 (toggle-frame-fullscreen)
 
+;; ivy
+(prelude-require-package 'ivy)
+(ivy-mode)
+(global-set-key (kbd "C-s") 'swiper)
+(setq ivy-re-builders-alist '((swiper . ivy--regex-plus)
+                              (t . ivy--regex-fuzzy)))
+
+;; projectile ivy
+(prelude-require-package 'counsel-projectile)
+(counsel-projectile-on)
+
 (provide 'personal)
 ;;; personal.el ends here
