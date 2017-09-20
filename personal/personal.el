@@ -89,5 +89,8 @@
 
 (setq ido-default-buffer-method 'selected-window)
 
+;; Start in full-screen
+(toggle-frame-fullscreen)
+
 (provide 'personal)
 ;;; personal.el ends here
