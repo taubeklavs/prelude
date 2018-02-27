@@ -101,7 +101,7 @@
 
 ;; projectile ivy
 (prelude-require-package 'counsel-projectile)
-(counsel-projectile-on)
+(counsel-projectile-mode)
 
 (provide 'personal)
 ;;; personal.el ends here
