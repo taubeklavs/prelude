@@ -66,7 +66,7 @@
 
 (setq face-height 120)
 
-(set-face-attribute 'default nil :family "Hack" :height face-height)
+(set-face-attribute 'default nil :family "Source Code Pro" :height face-height)
 
 (defun set-face-height (height)
   (set-face-attribute 'default nil :height height))
