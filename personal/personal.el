@@ -86,9 +86,6 @@
 
 (setq ido-default-buffer-method 'selected-window)
 
-;; Start in full-screen
-(toggle-frame-fullscreen)
-
 ;; ivy
 (prelude-require-package 'ivy)
 (ivy-mode)
