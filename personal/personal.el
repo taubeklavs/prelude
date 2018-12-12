@@ -87,6 +87,7 @@
 (ivy-mode)
 (global-set-key (kbd "C-s") 'swiper)
 (setq ivy-re-builders-alist '((swiper . ivy--regex-plus)
+                              (counsel-ag . ivy--regex-plus)
                               (t . ivy--regex-fuzzy)))
 
 ;; projectile ivy
