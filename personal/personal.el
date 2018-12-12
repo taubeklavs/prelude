@@ -93,6 +93,7 @@
 (prelude-require-package 'counsel-projectile)
 (counsel-projectile-mode)
 
+(server-start)
 
 (provide 'personal)
 ;;; personal.el ends here
