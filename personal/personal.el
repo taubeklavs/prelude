@@ -72,7 +72,7 @@
   (set-face-height face-height))
 
 (global-set-key (kbd "M-s-+") (lambda () (interactive) (change-face-height '+)))
-(global-set-key (kbd "M-s-–") (lambda () (interactive) (change-face-height '-)))
+(global-set-key (kbd "M-s--") (lambda () (interactive) (change-face-height '-)))
 
 (setq clojure-indent-style :align-arguments)
 
