@@ -60,7 +60,7 @@
 
 (global-set-key (kbd "C-c F") 'prelude-fullcontact)
 
-(setq face-height 120)
+(setq face-height 180)
 
 (set-face-attribute 'default nil :family "Source Code Pro" :height face-height)
 
