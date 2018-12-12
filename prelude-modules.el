@@ -10,4 +10,5 @@
 (require 'prelude-scheme)
 (require 'prelude-web)
 (require 'prelude-xml)
+(require 'prelude-rust)
 (require 'prelude-key-chord)
