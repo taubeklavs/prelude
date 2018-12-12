@@ -93,8 +93,6 @@
 (prelude-require-package 'counsel-projectile)
 (counsel-projectile-mode)
 
-;; org-mode customization
-(setq org-todo-keyword-faces'(("FAILED" . org-warning)))
 
 (provide 'personal)
 ;;; personal.el ends here
