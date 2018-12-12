@@ -29,20 +29,17 @@
 
 (add-hook 'after-make-frame-functions
           (lambda (frame)
-            (let ((mode (if (display-graphic-p frame) 'light 'dark)))
-              (set-frame-parameter frame 'background-mode mode)
-              (set-terminal-parameter frame 'background-mode mode))
-            (enable-theme 'solarized)))
+            (set-theme)))
 
-(defun next-solarized-mode ()
-  (if (eq frame-background-mode 'light)
-      'dark
-    'light))
+(defun current-theme ()
+  (if (equal (shell-command-to-string "echo -n $CURRENT_THEME")
+          "dark")
+      'dark 'light))
 
-(defun switch-themes ()
+(defun set-theme ()
   (interactive)
-  (customize-set-variable 'frame-background-mode (next-solarized-mode))
-  (load-theme 'solarized t))
+  (customize-set-variable 'frame-background-mode (current-theme))
+  (load-theme 'solarized))
 
 (key-chord-unset-global "jl")
 (key-chord-define-global "xx" 'smex)
