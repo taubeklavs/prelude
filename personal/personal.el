@@ -46,7 +46,6 @@
 
 (key-chord-unset-global "jl")
 (key-chord-define-global "xx" 'smex)
-(key-chord-define-global "tj" 'switch-themes)
 
 (define-key key-translation-map (kbd "M-ESC") (kbd "`"))
 
