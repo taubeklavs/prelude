@@ -78,9 +78,6 @@
 (global-set-key (kbd "M-s-+") (lambda () (interactive) (change-face-height '+)))
 (global-set-key (kbd "M-s-–") (lambda () (interactive) (change-face-height '-)))
 
-;; No text in frame title
-(setq frame-title-format "")
-
 (setq clojure-indent-style :align-arguments)
 
 (setq avy-all-windows 'all-frames)
